@@ -5,5 +5,5 @@ Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módul
 
 ## Modulo Arquitectura Big Data.
 
-Profesor: Ricardo Vegas
-Ejercicio práctico: [aquí]()
+- Profesor: Ricardo Vegas
+- Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/bigdataarchitecture)
