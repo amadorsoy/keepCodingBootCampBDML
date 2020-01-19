@@ -38,12 +38,15 @@ Estructura de Google Cloud Platform usada:
         - Download Path to process: inputdatamadrid
         - Uplad Path to process: outputdatamadrid
         - Scripts path to process in DataProc Cluster: scripts
-            - Script 1: .....
-                - URL: 
-            - Script 2: .....
-                - URL:
-            - Script 3: .....
-                - URL:
+            - Script 1:
+                - Nombre: installrequirements.sh
+                - Descripción: instala dependencias, copia a local un script de python y lo ejecuta
+                - URL: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/googlecloudapp/GoogleCloudPlatform/scripts/installrequirements.sh)
+            - Script 2:
+                - Nombre: createtablesandloaddata.py
+                - Descripción: lee los ficheros csv descargados y los transforma en las tablas necesarias para obtener los datos
+                - URL: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/googlecloudapp/GoogleCloudPlatform/scripts/createtablesandloaddata.py)
+
 - Cloud Scheduler: trabajos programados que se ejecutarán cada domingo para descargar los ficheros primero y para procesarlos después.
     - KeepCoding Download Madrid Data: 
         - Schedule: cada domingo a las 5:00
@@ -58,19 +61,26 @@ Estructura de Google Cloud Platform usada:
     - Cloud Function Download Data:
         - URL: https://github.com/amadorsoy/bigdataarchitectkc/blob/master/googlecloudapp/GoogleCloudPlatform/functions/download-api-madrid.py
     - Cloud Function Create Cluster DataProc:
-        - URL: ????
-    - Cloud Function Send Data To Mail:
-        - URL: ????
+        - Destino: HTTP de App Engine
+        - URL: /v1/projects/rock-sublime-264620/regions/europe-west1/clusters/
+        - Metodo HTTP: Post
+        - Cuerpo: script de creación de cluster
+            - URL: https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/googlecloudapp/OtherCode/cluster.create.txt
 - Clusteres DataProc: maquinas que se crearán y se usarán para procesar los datos y que posteriormente se eliminarán al finalizar el trabajo.
     - Code to create Cluster:
         - Desarrollo:
             - Levantar un cluster DataProc
-                - Incorporar scripts para:
-                    - Creación de estructura de datos: código [aquí](???)
-                    - Ejecución de sentencias SQL: código [aquí](???)
-                    - Exportación de datos resultantes: código [aquí](???)
-    - Code to delete Cluster:
-        - URL: código [aquí](????)
+                - Instalar las dependencias necesarias
+                    - Funciones: instalar tanto las librerías de Hive en Debian, como los módulos de python necesarios
+                    - Script: installrequirements.sh
+                    - Estado: completo, funciona correctamente
+                - Ejecutar un script que ejecute en Hive:
+                    - Funciones:
+                        - Creación de estructura de datos
+                        - Ejecución de sentencias SQL
+                        - Exportación de datos resultantes
+                    - Script: createtablesandloaddata.py
+                    Estado: al 70% aproximadamente (puede que más), queda realizar el cálculo de la distancia, obtener la lista de los 100 mejores y exportar los resultados a un archivo csv en el bucket de Google Storage.
 
 
 ## Operation Model
@@ -79,7 +89,7 @@ Estructura desatendida en la descarga y procesado de datos:
 1. Trabajo programado cada domingo a las 5:00: KeepCoding Download Madrid Data.
 2. Ejecución de la descarga de los datos: Cloud Function Download Data
 3. Trabajo programado cada domingo a las 6:00: KeepCoding Process Madrid Data
-4. Trabajo programado cada lunes a las 8:00: Cloud Function Send Data To Mail
+4. Creación de cluster, creación de la estructura de datos necesaria, procesar los datos y exportar los resultados a Google Storage.
 
 Hasta que no se tengan instrucciones de como mostrar los datos solo se enviarán los resultados por Mail al departamento correspondiente para su análisis. Cuando se tengan las instrucciones necesarias, se cambiará el envío de correo electrónico por la infraestructura necesaria.
 

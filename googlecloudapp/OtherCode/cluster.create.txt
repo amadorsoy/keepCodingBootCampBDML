@@ -1,17 +1,12 @@
-gcloud dataproc clusters create cluster-airbnb-keepcoding-bda5 --bucket ismalp-bda5-keepcoding --region europe-west1 --subnet default --zone europe-west1-d --master-machine-type n1-standard-2 --master-boot-disk-type pd-ssd --master-boot-disk-size 20 --num-workers 2 --worker-machine-type n1-standard-2 --worker-boot-disk-type pd-ssd --worker-boot-disk-size 20 --image-version 1.3-deb9 --scopes 'https://www.googleapis.com/auth/cloud-platform' --project rock-sublime-264620
-
 POST /v1/projects/rock-sublime-264620/regions/europe-west1/clusters/
 {
-  "clusterName": "cluster-airbnb-keepcoding-bda5",
+  "clusterName": "keepcodingbdapractica-01",
   "config": {
     "configBucket": "ismalp-bda5-keepcoding",
     "gceClusterConfig": {
       "zoneUri": "europe-west1-d",
       "metadata": {},
-      "subnetworkUri": "default",
-      "serviceAccountScopes": [
-        "https://www.googleapis.com/auth/cloud-platform"
-      ]
+      "subnetworkUri": "default"
     },
     "masterConfig": {
       "numInstances": 1,
@@ -28,7 +23,7 @@ POST /v1/projects/rock-sublime-264620/regions/europe-west1/clusters/
       "machineTypeUri": "n1-standard-2",
       "diskConfig": {
         "bootDiskType": "pd-ssd",
-        "bootDiskSizeGb": 20,
+        "bootDiskSizeGb": 40,
         "numLocalSsds": 0
       },
       "accelerators": []
@@ -41,7 +36,14 @@ POST /v1/projects/rock-sublime-264620/regions/europe-west1/clusters/
     "secondaryWorkerConfig": {
       "numInstances": 0,
       "isPreemptible": true
-    }
+    },
+    "lifecycleConfig": {
+      "idleDeleteTtl": "36000s"
+    },
+    "initializationActions": [
+      {
+        "executableFile": "gs://ismalp-bda5-keepcoding/scripts/installrequirements.sh"
+      }]
   },
   "projectId": "rock-sublime-264620"
 }
