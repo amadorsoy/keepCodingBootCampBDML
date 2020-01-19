@@ -93,7 +93,7 @@ Hasta que no se tengan instrucciones de como mostrar los datos solo se dejarán 
 
 
 ## Diagrama
-https://view.genial.ly/5e22fde1134c1a7009e3125b/interactive-content-keepcodingbda5-proceso
+Para visualizar el diagrama [aquí](https://view.genial.ly/5e22fde1134c1a7009e3125b/interactive-content-keepcodingbda5-proceso)
 
 
 ## Fuentes de datos
