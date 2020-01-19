@@ -85,7 +85,7 @@ Hasta que no se tengan instrucciones de como mostrar los datos solo se enviarán
 
 
 ## Diagrama
-https://view.genial.ly/5e1ff6c077322d4f683f2b44/interactive-content-keepcodingbda5
+https://view.genial.ly/5e22fde1134c1a7009e3125b/interactive-content-keepcodingbda5-proceso
 
 
 ## Fuentes de datos
