@@ -53,6 +53,7 @@ Estructura de Google Cloud Platform usada:
         - Destino: HTTP
         - Metodo: GET        
         - Destino: La URL Generada por la cloud function download data.
+        - Archivos generados: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/bigdataarchitecture/download_csv)
     - KeepCoding Process Madrid Data:
         - Schedule: cada lunes a las 8:00
         - Destino: HTTP de App Engine
