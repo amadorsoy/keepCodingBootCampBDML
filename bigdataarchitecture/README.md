@@ -27,7 +27,7 @@ Life in Madrid Like Greta, respeta el planeta.
 
 ## Estrategia del DAaaS
 
-Generar un archivo en formato csv con los 100 pisos de AirBnb en Madrid que más ayudarían a vivir sin contaminar para que el departamento de Marketing decida como va a querer dar uso de estos datos. Debido a la falta de infraestructura en local, se va a usar las herramientas que ofrece Google Cloud Platform en la "nube".
+Generar un archivo en formato csv con los 100 pisos de AirBnb en Madrid que más ayudarían a vivir sin contaminar para que el departamento de Marketing decida como va a querer dar uso de estos datos. Debido a la falta de infraestructura en local, se va a usar las herramientas que ofrece Google Cloud Platform en la "nube". Desde la descarga de los recursos, el procesado de los datos y la generación del archivo final tendrá lugar en Google Cloud Platform, teniendo acceso desde el departamento que necesita leer los resultados al path correspondiente del Storage de Google.
 
 
 ## Arquitectura
@@ -50,36 +50,33 @@ Estructura de Google Cloud Platform usada:
 - Cloud Scheduler: trabajos programados que se ejecutarán cada domingo para descargar los ficheros primero y para procesarlos después.
     - KeepCoding Download Madrid Data: 
         - Schedule: cada domingo a las 5:00
+        - Destino: HTTP
+        - Metodo: GET        
         - Destino: https://europe-west1-rock-sublime-264620.cloudfunctions.net/download-data-api-madrid-2020-01 
     - KeepCoding Process Madrid Data:
-        - Schedule: cada domingo a las 6:00
-        - Destino: ????
-    - KeepCoding Send Result:
         - Schedule: cada lunes a las 8:00
-        - Destino: ????
+        - Destino: HTTP de App Engine
+        - Metodo: POST
+        - URL: /v1/projects/rock-sublime-264620/regions/europe-west1/clusters/
+        - Cuerpo: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/googlecloudapp/OtherCode/cluster.create.txt)
 - Cloud Functions: llamadas por los trabajos programados se encargarán de realizar las acciones necesarias para obtener los resultados, en principio el lenguaje de programación seleccionado es Python para su configuración.
     - Cloud Function Download Data:
         - URL: https://github.com/amadorsoy/bigdataarchitectkc/blob/master/googlecloudapp/GoogleCloudPlatform/functions/download-api-madrid.py
-    - Cloud Function Create Cluster DataProc:
-        - Destino: HTTP de App Engine
-        - URL: /v1/projects/rock-sublime-264620/regions/europe-west1/clusters/
-        - Metodo HTTP: Post
-        - Cuerpo: script de creación de cluster
-            - URL: https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/googlecloudapp/OtherCode/cluster.create.txt
 - Clusteres DataProc: maquinas que se crearán y se usarán para procesar los datos y que posteriormente se eliminarán al finalizar el trabajo.
     - Code to create Cluster:
+        - Estructura del Cluster: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/googlecloudapp/OtherCode/cluster.create.txt)
         - Desarrollo:
             - Levantar un cluster DataProc
                 - Instalar las dependencias necesarias
                     - Funciones: instalar tanto las librerías de Hive en Debian, como los módulos de python necesarios
-                    - Script: installrequirements.sh
+                    - Script: installrequirements.sh visto anteriormente en la sección de Scripts
                     - Estado: completo, funciona correctamente
-                - Ejecutar un script que ejecute en Hive:
+                - Ejecutar un script para ejecutar comandos en Hive:
                     - Funciones:
                         - Creación de estructura de datos
                         - Ejecución de sentencias SQL
                         - Exportación de datos resultantes
-                    - Script: createtablesandloaddata.py
+                    - Script: createtablesandloaddata.py visto anteriormente en la sección de Scripts
                     Estado: al 70% aproximadamente (puede que más), queda realizar el cálculo de la distancia, obtener la lista de los 100 mejores y exportar los resultados a un archivo csv en el bucket de Google Storage.
 
 
@@ -90,8 +87,9 @@ Estructura desatendida en la descarga y procesado de datos:
 2. Ejecución de la descarga de los datos: Cloud Function Download Data
 3. Trabajo programado cada domingo a las 6:00: KeepCoding Process Madrid Data
 4. Creación de cluster, creación de la estructura de datos necesaria, procesar los datos y exportar los resultados a Google Storage.
+5. El departamento que necesita los datos se descargará el archivo csv resultante para su análisis.
 
-Hasta que no se tengan instrucciones de como mostrar los datos solo se enviarán los resultados por Mail al departamento correspondiente para su análisis. Cuando se tengan las instrucciones necesarias, se cambiará el envío de correo electrónico por la infraestructura necesaria.
+Hasta que no se tengan instrucciones de como mostrar los datos solo se dejarán los resultados en el Storage para que el departamento correspondiente lo pueda descargar y analizar. Cuando se tengan las instrucciones necesarias, se cambiará el destino de los resultados por la infraestructura necesaria.
 
 
 ## Diagrama
