@@ -7,3 +7,7 @@ Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módul
 
 - Profesor: Ricardo Vegas
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/bigdataarchitecture)
+
+## Modulo Bid Data Processing
+- Profesor: Marta Ramirez
+- Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/bigdataprocessing)
