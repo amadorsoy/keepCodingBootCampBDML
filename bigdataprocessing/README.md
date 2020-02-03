@@ -60,6 +60,8 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
         ```
         echo $JAVA_HOME
         ```
+Imagen Resultado [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/VerificacionInstalacionJava.png):
+![Resultado Java Instalado](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/VerificacionInstalacionJava.png)
 
 ### Spark
 
@@ -102,6 +104,8 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
     ```
     start-slave.sh spark://bdprocessing.bootcampbd.keepcoding.com:7077
     ```
+Resultado Spark Instalado [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkEnDebianPractica.PNG):
+![Spark Servicio Activo Maestro - Esclavo](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkEnDebianPractica.PNG)
 
 
 
@@ -127,6 +131,8 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
     sudo apt-get install sbt
     ```
 
+Resultado Scala en Debian [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ScalaDebianPractica.PNG)
+![Scala En Debian](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ScalaDebianPractica.PNG)
 
 ### Zeppelin
 
@@ -161,6 +167,9 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
         ```
 - Cuando se inicia solo tenemos que ir a la url: http://localhost:8100. Es así porque hemos cambiado el puerto anteriormente
 
+Resultado Zeppelin en Navegador [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ZeppelinEnDebianPractica.PNG)
+![Zeppelin NoteBook](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ZeppelinEnDebianPractica.PNG)
+
 - Configurar nuestro Spark local, como el interprete de Spark en Zeppelin (pero con una configuración nueva para no romper el que viene en la instalación por defecto.)
 
     * Ir al menú de usuario (en nuestro caso anonymous)
@@ -175,4 +184,5 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
         * Guardamos los cambios y hacemos clic en restart del interprete.
         * Ya podremos usar nuestro Spark en Local en Zeppelin
 
-    
+Resultado configurado Spark Local en Zeppelin [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkLocalEnZeppelin.png)
+![Spark Local 2.4.4 en Zeppelin](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkLocalEnZeppelin.png)
