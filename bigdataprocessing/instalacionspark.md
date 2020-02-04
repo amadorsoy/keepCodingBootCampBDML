@@ -43,5 +43,9 @@ start-master.sh
 start-slave.sh spark://bdprocessing.bootcampbd.keepcoding.com:7077
 ```
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Resultado Spark Instalado [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkEnDebianPractica.PNG):
 ![Spark Servicio Activo Maestro - Esclavo](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkEnDebianPractica.PNG)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

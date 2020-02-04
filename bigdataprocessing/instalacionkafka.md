@@ -155,3 +155,10 @@ Si todo ha ido bien, podemos configurar para que se inicie kafka en cada inicio 
 ```
 systemctl enable kafka.service
 ```
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Resultado Kafka funcionando en Debian [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/KafkaServiceRunning.png)
+![Kafka En Debian](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/KafkaServiceRunning.png)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

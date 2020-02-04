@@ -12,21 +12,21 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
 
 ### Java
 
-Instalación de Java [aquí]()
+Instalación de Java [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionjava.md)
 
 ### Spark
 
-Instalación de Spark [aquí]()
+Instalación de Spark [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionspark.md)
 
 
 ### Scala 
 
-Instalación de Scala [aquí]()
+Instalación de Scala [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionscala.md)
 
 ### Zeppelin
 
-Instalación de Zeppelin [aquí]()
+Instalación de Zeppelin [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionzeppelin.md)
 
 ### Kafka
 
-Instalación de Kafka [aquí]()
+Instalación de Kafka [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionkafka.md)

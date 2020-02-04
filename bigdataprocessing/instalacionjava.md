@@ -62,6 +62,10 @@ source .bashrc
 ```
 echo $JAVA_HOME
 ```
-        
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Imagen Resultado [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/VerificacionInstalacionJava.png):
 ![Resultado Java Instalado](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/VerificacionInstalacionJava.png)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

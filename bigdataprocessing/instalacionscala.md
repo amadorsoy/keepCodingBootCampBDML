@@ -22,5 +22,9 @@ sudo apt-get update
 sudo apt-get install sbt
 ```
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Resultado Scala en Debian [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ScalaDebianPractica.PNG)
 ![Scala En Debian](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ScalaDebianPractica.PNG)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

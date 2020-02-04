@@ -78,5 +78,9 @@ Vamos de nuevo a la sección Interprete del menú de usuario. Buscamos SparkLoca
 
 Ya podremos usar nuestro Spark en Local en Zeppelin
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Resultado configurado Spark Local en Zeppelin [url](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkLocalEnZeppelin.png)
 ![Spark Local 2.4.4 en Zeppelin](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/SparkLocalEnZeppelin.png)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
