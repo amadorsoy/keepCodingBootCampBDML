@@ -1,0 +1,246 @@
+{
+    "paragraphs": [
+      {
+        "text": "//Primero Importo las librerias necesarias para el código que vamos a usar\nimport org.apache.spark.sql.SparkSession\nimport org.apache.spark.sql.types.{IntegerType, StringType, StructType, LongType}",
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:00+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580852814396_-1511923590",
+        "id": "20200204-214654_1430112383",
+        "dateCreated": "2020-02-04T21:46:54+0000",
+        "dateStarted": "2020-02-05T05:30:00+0000",
+        "dateFinished": "2020-02-05T05:30:12+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "focus": true,
+        "$$hashKey": "object:2794"
+      },
+      {
+        "text": "//Creo un objeto SparkSession que me va a permitir posteriormente cargar los datos del csv\nval spark: SparkSession = SparkSession.builder().master(\"local[1]\").appName(\"csvAmigos\").getOrCreate()",
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:12+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580853035429_-1237057398",
+        "id": "20200204-215035_1102613239",
+        "dateCreated": "2020-02-04T21:50:35+0000",
+        "dateStarted": "2020-02-05T05:30:12+0000",
+        "dateFinished": "2020-02-05T05:30:13+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "$$hashKey": "object:2795"
+      },
+      {
+        "text": "//Creo un esquema para poder usar los nombres de los campos del archivo csv\nval schema = new StructType().add(\"id\", IntegerType).add(\"nombre\", StringType).add(\"edad\", IntegerType).add(\"valores\", LongType)",
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:13+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580853315110_-6822322",
+        "id": "20200204-215515_198487773",
+        "dateCreated": "2020-02-04T21:55:15+0000",
+        "dateStarted": "2020-02-05T05:30:13+0000",
+        "dateFinished": "2020-02-05T05:30:14+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "$$hashKey": "object:2796"
+      },
+      {
+        "text": "//Creo un dataframe que obtendrá los datos del archivo CSV con el delimitador \",\" y aplicando al archivo indicado el esquema creado\nval dfAmigos = spark.read.format(\"csv\").schema(schema).option(\"delimiter\", \",\").load(\"/home/amador/bdprocessingfiles/amigos.csv\")",
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:14+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580853481404_-2115407270",
+        "id": "20200204-215801_557195037",
+        "dateCreated": "2020-02-04T21:58:01+0000",
+        "dateStarted": "2020-02-05T05:30:14+0000",
+        "dateFinished": "2020-02-05T05:30:15+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "$$hashKey": "object:2797"
+      },
+      {
+        "text": "// Creo una variable con la información que me da la función de agregado countDistinct del select\nval dfAmigosNumeroRegistros = dfAmigos.select(countDistinct(\"id\"))\n//muestro los valores\ndfAmigosNumeroRegistros.show(false)",
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:15+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580853669704_965813126",
+        "id": "20200204-220109_669440747",
+        "dateCreated": "2020-02-04T22:01:09+0000",
+        "dateStarted": "2020-02-05T05:30:15+0000",
+        "dateFinished": "2020-02-05T05:30:19+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "$$hashKey": "object:2798"
+      },
+      {
+        "text": "spark.stop()",
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:19+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580853687624_1559647298",
+        "id": "20200204-220127_1265732108",
+        "dateCreated": "2020-02-04T22:01:27+0000",
+        "dateStarted": "2020-02-05T05:30:19+0000",
+        "dateFinished": "2020-02-05T05:30:19+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "$$hashKey": "object:2799"
+      },
+      {
+        "user": "anonymous",
+        "dateUpdated": "2020-02-05T05:30:19+0000",
+        "config": {
+          "colWidth": 12,
+          "fontSize": 9,
+          "enabled": true,
+          "results": {},
+          "editorSetting": {
+            "language": "scala",
+            "editOnDblClick": false,
+            "completionKey": "TAB",
+            "completionSupport": true
+          },
+          "editorMode": "ace/mode/scala",
+          "tableHide": false
+        },
+        "settings": {
+          "params": {},
+          "forms": {}
+        },
+        "apps": [],
+        "jobName": "paragraph_1580854000004_-2070475618",
+        "id": "20200204-220640_1330559094",
+        "dateCreated": "2020-02-04T22:06:40+0000",
+        "status": "FINISHED",
+        "errorMessage": "",
+        "progressUpdateIntervalMs": 500,
+        "$$hashKey": "object:2800"
+      }
+    ],
+    "name": "/practica/ejercicio1",
+    "id": "2F2U1TRBW",
+    "noteParams": {},
+    "noteForms": {},
+    "angularObjects": {
+      "SparkLocal:shared_process": []
+    },
+    "config": {
+      "isZeppelinNotebookCronEnable": false,
+      "looknfeel": "default",
+      "personalizedMode": "false"
+    },
+    "info": {}
+  }
