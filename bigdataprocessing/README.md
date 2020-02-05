@@ -53,4 +53,4 @@ A continuación vamos a poder ver los ejercicios propuestos y la resolución de 
 
 ### Investigación
 
-En la sección de Instalación ya se ha podido ver el proceso de instalación y configuración de Zeppelin en el equipo, recordemos que para poder ver los pasos a seguir hay que ir [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionzeppelin.md) .
+Instalación y uso de Zeppelin [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/ejercicios/zeppelin.md)
