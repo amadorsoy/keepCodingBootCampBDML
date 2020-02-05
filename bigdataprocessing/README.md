@@ -12,24 +12,24 @@ Una vez instalada la maquina virtual con Debian 10 como sistema operativo realiz
 
 ### Java
 
-Instalación de Java [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionjava.md)
+Instalación de Java [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalaciones/instalacionjava.md)
 
 ### Spark
 
-Instalación de Spark [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionspark.md)
+Instalación de Spark [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalaciones/instalacionspark.md)
 
 
 ### Scala 
 
-Instalación de Scala [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionscala.md)
+Instalación de Scala [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalaciones/instalacionscala.md)
 
 ### Zeppelin
 
-Instalación de Zeppelin [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionzeppelin.md)
+Instalación de Zeppelin [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalaciones/instalacionzeppelin.md)
 
 ### Kafka
 
-Instalación de Kafka [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalacionkafka.md)
+Instalación de Kafka [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/instalaciones/instalacionkafka.md)
 
 ## Material
 
