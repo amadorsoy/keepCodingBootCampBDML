@@ -71,7 +71,7 @@ Igual que se ejecuta desde el path de instalación de kafka /home/kafka/kafka/bi
 
 ## Crear un Kafka Consumer en Scala
 
-El ejercicio consta de crear en Scala un archivo JSON enviado a través de un Kafka Console Producer y hacer que las palabras que elijamos no aparezcan cuando escribamos el resultado del tratamiento.
+El ejercicio consta de crear en Scala un archivo .scala que lea el contenido de un archivo JSON enviado a través de un Kafka Console Producer y hacer que las palabras que elijamos no aparezcan cuando escribamos el resultado del tratamiento.
 
 ### Consideraciones generales
 
