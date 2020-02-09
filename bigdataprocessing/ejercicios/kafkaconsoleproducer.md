@@ -27,7 +27,7 @@ No debería dar ningún resultado, ya que no se ha realizado ningún Topic anter
 ```
 ./kafka-topics.sh --list --zookeeper localhost:2181
 ```
-Imagen aquí
+![Kafka Topics List](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/CheckKafkaZookeeperTopics.png)
 
 ## Crear el Topic que se va a usar para la comunicación
 
@@ -41,7 +41,7 @@ Como consideración, se elige crear el Topic con 2 particiones, para prevenir un
 
 Luego hacemos de nuevo el listado para que veamos si se ha creado correctamente, aunque nos lo indica al crearlo, para eso volvemos a comprobar la existencia de topics creados, con el comando anteriormente citado.
 
-Imagen aquí
+![Kafka Create Topic](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/ZepellinKafkaProducerConsoleCreateTopicAndCheck.png)
 
 ## Para eliminar el topic
 
@@ -66,4 +66,4 @@ Igual que se ejecuta desde el path de instalación de kafka /home/kafka/kafka/bi
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topicpractica --from-beginning
 ```
 
-![imagen]()
+![Kafka Console Consumer Running](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/KafkaConsoleConsumerViewJsonData.png)
