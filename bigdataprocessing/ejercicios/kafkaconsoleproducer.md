@@ -1,0 +1,69 @@
+# Kafka Console Producer
+
+Accedemos al terminal y nos validamos como usuario root (es decir, su) para ejecutar los comandos.
+
+También iremos al directorio de Kafka en el usuario Kafka
+```
+cd /home/kafka/kafka/bin
+```
+
+## Comprobar Kafka Service
+
+Comprobación de funcionamiento correcto de Kafka Service en el sistema
+```
+systemctl status kafka
+```
+
+## Comprobar Zookeeper Service 
+
+Comprobación de funcionamiento correcto de Zookeeper Service en el sistema
+```
+systemctl status zookeeper
+```
+
+## Comprobar existencia de Topics creados
+
+No debería dar ningún resultado, ya que no se ha realizado ningún Topic anteriormente.
+```
+./kafka-topics.sh --list --zookeeper localhost:2181
+```
+Imagen aquí
+
+## Crear el Topic que se va a usar para la comunicación
+
+Vamos a crear un Topic que usaremos para realizar la comunicación entre el Producer y el Consumer.
+
+Como consideración, se elige crear el Topic con 2 particiones, para prevenir un poco que los datos sean "muchos".
+
+```
+./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic topicpractica
+``` 
+
+Luego hacemos de nuevo el listado para que veamos si se ha creado correctamente, aunque nos lo indica al crearlo, para eso volvemos a comprobar la existencia de topics creados, con el comando anteriormente citado.
+
+Imagen aquí
+
+## Para eliminar el topic
+
+Por si necesitaramos eliminarlo, sea por la razón que sea, el comando sería:
+```
+./kafka-topics.sh --zookeeper localost:2181 --delete --topic topicpractica
+```
+
+## Generar el Kafka Console Producer (productor)
+
+Tenemos en cuenta que nuestro "Producer" va a ser por consola. Así que usaremos "kafka-console-producer-sh" para generar el "productor". En mi caso tengo el archivo personal.json en "/home/amador/bdproessingfies". Este es el archivo que enviaré con el productor desde la consola. No se adjunta ninguna imagen al proceso, porque realmente no se ve nada, al finalizar el proceso solo vemos el cursor esperando otra nueva instrucción.
+
+```
+cat /home/amador/bdprocessingfiles/personal.json | ./kafka-console-producer.sh --broker-list localhost:9092 --topic topicpractica > /dev/null 
+```
+
+## Generar el Kafka Console Consumer (consumidor)
+
+Igual que se ejecuta desde el path de instalación de kafka /home/kafka/kafka/bin/ el productor, el consumidor lo ejecutaremos desde el mismo path y siendo también usuario root. Ejecutamos el siguiente comando y deberíamos tener la misma salida por consola que la que vemos en la imagen
+
+```
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topicpractica --from-beginning
+```
+
+![imagen]()

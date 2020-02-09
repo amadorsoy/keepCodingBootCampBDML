@@ -25,5 +25,5 @@ En esta opción, vamos a cargar el archivo csv con un esquema y usando un agrega
 - Imagen del Resultado: 
 ![Resultado NoteBook Zeppelin Contar Registros CSV](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/EjercicioContarRegistrosCSVResultado.png)
 
-- Vídeo con la ejecución del código (puede que sea mejor descargarlo para visualizarlo)
+- Vídeo con la ejecución del código (Al acceder a la URL para ver vídeo puede dar en View Raw o descargar el enlace)
 ![NoteBook Zeppelin Running](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/videos/ZeppelinContarRegistrosCSV.mp4)
