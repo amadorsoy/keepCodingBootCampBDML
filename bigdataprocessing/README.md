@@ -33,7 +33,7 @@ Instalación de Kafka [aquí](https://github.com/amadorsoy/keepCodingBootCampBDM
 
 ## Material
 
-Tras hacer las instalaciones de todo el entorno necesario para realizar la práctica, descargo el repositorio de Big Data Processing - Spark - Scala del GitLab de Keepcoding
+Tras hacer las instalaciones de todo el entorno necesario para realizar la práctica, descargo el repositorio de Big Data Processing - Spark - Scala del GitLab de Keepcoding.
 
 ### Clonación del repositorio
 
@@ -42,13 +42,18 @@ Como usuario normal, clono el repositorio en el home del usuario con el comando:
 git clone https://gitlab.keepcoding.io/keepcoding-bootcamps/full-stack-big-data-y-ml-v/big-data-processing.spark-y-scala.git
 ```
 
+### Ficheros de práctica
+
+Creo un directorio en /home/amador en el que guardo los archivos csv y json que se usarán en las practicas e investigación.
+
+
 ## Ejercicios
 
 A continuación vamos a poder ver los ejercicios propuestos y la resolución de los mismos.
 
 ### kafka
 
-.....
+Uso de Kafka para los ejercicios [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/ejercicios/kafkaconsoleproducer.md)
 
 
 ### Investigación

@@ -67,3 +67,35 @@ Igual que se ejecuta desde el path de instalación de kafka /home/kafka/kafka/bi
 ```
 
 ![Kafka Console Consumer Running](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/KafkaConsoleConsumerViewJsonData.png)
+
+
+## Crear un Kafka Consumer en Scala
+
+El ejercicio consta de crear en Scala un archivo JSON enviado a través de un Kafka Console Producer y hacer que las palabras que elijamos no aparezcan cuando escribamos el resultado del tratamiento.
+
+### Consideraciones generales
+
+- IDE: se escoge para este ejercicio usar el entorno de desarrollo ofrecido por JetBrains Intellig Idea, para el proyecto se ha tenido que configurar entre otras opciones:
+    - JDK: 1.8
+    - JARS de Spark, indicarle el directorio desde donde leer los "JARS" de Spark.
+    - Scala: versión de uso 2.11.12
+    - Importar algunas librerias para trabajar con Kafka en el fichero SBT del proyecto:
+        ```
+            libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.0"% "Provided"
+            libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.4.0"
+            libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "2.4.0"
+        ```
+
+- Se pretende eliminar de la cuenta de correo electrónico la palabra ".gov", tampoco queremos mostrar el nombre "Jeanette"y no queremos mostrar el genero "Male".
+
+### Código fuente del proyecto
+
+Para poder ver el código fuente del ejercicio podemos ir [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/srcejercicios/kcpractica.scala).
+
+Se lee el JSON enviado con Kafka Console Producer con un esquema que ayudará en el tratamiento de la información en modo "SQL".
+
+El resultado final podemos verlo en la siguiente imagen:
+![Imagen resumen kafka Consumer](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/images/KafkaConsumerStringsReplace.PNG)
+
+La ejecución del ejercicio, lo podemos visualizar en el siguiente vídeo (haciendo clic en View Raw se debería ejecutar el vídeo y ver el proceso):
+![Vídeo del proceso](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/bigdataprocessing/videos/kafkaconsoleproducerscalaconsumer.mp4)
