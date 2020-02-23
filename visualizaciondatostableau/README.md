@@ -12,8 +12,8 @@ El desarrollo de la descarga de los datos a través de la plataforma de Google C
 
 Además dejo en el directorio de datos, los csv siguientes:
 
-* Los datos obtenidos de la consulta directamente de Google Cloud Platform SQL (con postgresql como opción) [aquí]().
-* Los datos de las paradas de Metro de Madrid con su Geolocalización [aquí]().
+* Los datos obtenidos de la consulta directamente de Google Cloud Platform SQL (con postgresql como opción) [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/visualizaciondatostableau/datos/DatosAirBnBMadridConParadasMetroDeGooglePlatformSQL.csv).
+* Los datos de las paradas de Metro de Madrid con su Geolocalización [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/visualizaciondatostableau/datos/metro.csv).
 
 
 ## ETL - Preparación de los datos
@@ -25,13 +25,14 @@ Una vez decididos los datos a usar, había que alojarlos en la plataforma de Goo
 2. Una vez hemos dejado los archivos lo más pulidos posible, subimos los archivos al servicio de Storage de Google Cloud Platform. Este proceso se realiza manualmente.
 
 3. Para trabajar con los datos escogemos el servicio de SQL de GCP, se creó un servidor de PostGreSQL para alojar los datos y posteriormente realizar las sentencias SQL necesarias para obtener unos datos con los que podamos empezar a trabajar. Podemos ver en la siguiente imagen el uso reciente del servidor PostGreSQL.
+![Servidor PostGreSQL Google Cloud Platform](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/visualizaciondatostableau/imagenes/ServidorPostGreSQLGoogleCloudPlatform.PNG)
 
 4. A través de la consola de GCP utilizamos el comando gsutil para copiar los archivos del Storage al servidor donde está alojada la instancia de PostGreSQL:
     ```
     gsutil cp gs://ismalp-bda5-keepcoding/inputdatamadrid/metro.csv ./metro.csv
     ```
 
-5. Creamos la estructura necesaria para alojar los datos, podrá ver la estructura de las tablas [aquí]().
+5. Creamos la estructura necesaria para alojar los datos, podrá ver la estructura de las tablas [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/visualizaciondatostableau/estructura/tablas.sql).
 
 6. De nuevo a través de la consola GCP y el entorno de trabajo de PostGreSQL, realizamos la carga de los datos, desde los archivos CSV a las tablas generadas anteriormente:
     ```
@@ -58,7 +59,7 @@ Una vez decididos los datos a usar, había que alojarlos en la plataforma de Goo
                     group by id
         ) as paradas on paradas.id = airbnb.id
     ```
-    * Descargamos los datos en un archivo CSV para evitar problemas de Conexión ya que tengo filtrada la IP y no abierto a todo el público. Para poder verlos hay que ir [aquí]().
+    * Descargamos los datos en un archivo CSV para evitar problemas de Conexión ya que tengo filtrada la IP y no abierto a todo el público. Para poder verlos hay que ir [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/visualizaciondatostableau/datos/DatosAirBnBMadridConParadasMetroDeGooglePlatformSQL.csv).
 
 8. Ya con los datos en Tableau, hacer algunas modificaciones para poder tener los datos más "limpios".
 
@@ -83,4 +84,4 @@ La visualización está compuesta por una gráfica de barras y por un mapa. Ambo
 
 Además al mapa se le ha dado cierto nivel de detalle para que sin ser muy pesado ver los datos, se puedan hacer una idea exacta de la situación en la ciudad.
 
-El archivo lo puede encontrar [aquí]().
+El archivo lo puede encontrar [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/visualizaciondatostableau/LibroTrabajo).
