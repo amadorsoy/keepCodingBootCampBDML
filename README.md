@@ -15,3 +15,8 @@ Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módul
 ## Modulo Exploración y visualización de datos
 - Profesor: Jose Antonio Gascón
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/visualizaciondatostableau)
+
+## Modulo Modern Exploration & Visualization - D3.js
+- Profesor: Miguel Angel Díaz
+- Ejercicio práctico: [aquí]()
+

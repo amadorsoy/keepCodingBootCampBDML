@@ -1,7 +1,7 @@
 # KeepCoding BootCamp Exploración y Visualización de Datos - Tableau
 
 ## Objetivo
-El departamento comercial quiere captar la atención de la nueva ola de jovenes preocupados por el medio ambiente. Nos han pedido para empezar los barrios que mejor comunicados están vía Metro, para evitar tener que usar un coche y si es posible que además se pueda segmentar por los precios de los alojamientos, porque son jovenes y no necesariamente con recursos económicos. A través de los datos de AirBnb queremos indicar los lugares mejor comunicados vía Metro vamos a intentar plasmar en un pequeño dashboard los barrios mejor comunicados y que puedan resultar atractivos para el bolsillo.
+El departamento comercial quiere captar la atención de la nueva ola de jovenes preocupados por el medio ambiente. Nos han pedido para empezar los barrios que mejor comunicados están vía Metro, para evitar tener que usar un coche y si es posible que además se pueda segmentar por los precios de los alojamientos, porque son jovenes y no necesariamente con recursos económicos. A través de los datos de AirBnb queremos indicar los lugares mejor comunicados vía Metro, vamos a intentar plasmar en un pequeño dashboard los barrios mejor comunicados y que puedan resultar atractivos para el bolsillo.
 
 Después de esta primera toma de contacto con la información, ya el departamento comercial se pondrá en contacto de nuevo para profundizar en más aspectos que puedan interesar.
 
