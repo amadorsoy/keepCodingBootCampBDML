@@ -1,6 +1,3 @@
-//para tooltip
-//https://bl.ocks.org/d3noob/a22c42db65eb00d4e369
-
 const widthGrid = 400;
 const heightGrid = 400;
 
@@ -9,15 +6,7 @@ const heightLegend = 20;
 const numberOfLegends = 10;
 const maxPrice = 300;
 
-/*
-d3.json("http://localhost:3000/getGeoJSonData")
-    .then( (dataGeoJson) => {
-        drawMap(dataGeoJson);
-    } 
-);
-*/
-
-d3.json("../practica.json")
+d3.json("https://raw.githubusercontent.com/amadorsoy/keepCodingBootCampBDML/master/modernvisualization/datosjson/practica.json")
     .then( (dataGeoJson) => {
         drawMap(dataGeoJson);
     } 
@@ -97,7 +86,7 @@ function drawMap(dataGeoJSon) {
             .style("opacity", .9)
             .style("left", (event.pageX+10) + "px")
             .style("top", (event.pageY-10) + "px")
-            .text(`${feature.properties.name} - Importe Promedio: ${preciomedio}`);
+            .text(`${feature.properties.name} - Average Price: ${preciomedio}`);
     }
 
     function reset() {
@@ -144,10 +133,11 @@ function drawMap(dataGeoJSon) {
             .attr('height', heightLegend)
             .attr('fill', scaleColor(index));
         textColorLegendGroupIndex
-            .style("color", "black")    
-            .attr("x", 5)
+            .style("color", "black")
+            .style("font-size", "small")
+            .attr("x", 1)
             .attr("y", 15)
-            .text(`${minColorRange}-${maxColorRange}`);
+            .text(`${minColorRange}-${maxColorRange}€`);
         minColorRange = maxColorRange + 1;
         maxColorRange += 30;
     }
@@ -169,7 +159,7 @@ function createGraphic(feature){
             .append("text")
             .attr("x", 20)
             .attr("y", heightGrid / 2)
-            .text("Sin datos para generar una grafica. Disculpe.");
+            .text("No data to show, sorry for the inconvenience.");
     } else {
 
         const scaleY = getScalarY(feature.properties.avgbedrooms);
@@ -192,7 +182,7 @@ function createGraphic(feature){
             .attr("fill", "none")
             .attr("stroke", "blue")
             .attr("stroke-width", 1)
-            .attr("transform", `translate(30, 0)`)
+            .attr("transform", `translate(30, 5)`)
             .attr("d", dataLine(feature.properties.avgbedrooms));
 
         const axisY = d3.axisLeft(scaleY).ticks(5);
