@@ -20,3 +20,6 @@ Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módul
 - Profesor: Miguel Angel Díaz
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/modernvisualization)
 
+## Modulo Estadística y diseño Experimental
+- Profesor: José María González
+- Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/estadistica)
