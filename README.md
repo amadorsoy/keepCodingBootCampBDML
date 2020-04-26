@@ -23,3 +23,7 @@ Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módul
 ## Modulo Estadística y diseño Experimental
 - Profesor: José María González
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/estadistica)
+
+## Modulo Algebra
+- Profesor: Sandra Navarro
+- Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/algebra)
