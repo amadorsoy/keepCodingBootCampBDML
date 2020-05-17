@@ -3,27 +3,31 @@
 ## Mis Datos
 Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módulos que he ido realizando y las practicas que tengo que entregar en el BootCamp de KeepCoding.
 
-## Modulo Arquitectura Big Data.
+## Módulo Arquitectura Big Data.
 
 - Profesor: Ricardo Vegas
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/bigdataarchitecture)
 
-## Modulo Bid Data Processing
+## Módulo Bid Data Processing
 - Profesor: Marta Ramirez
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/bigdataprocessing)
 
-## Modulo Exploración y visualización de datos
+## Módulo Exploración y visualización de datos
 - Profesor: Jose Antonio Gascón
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/visualizaciondatostableau)
 
-## Modulo Modern Exploration & Visualization - D3.js
+## Módulo Modern Exploration & Visualization - D3.js
 - Profesor: Miguel Angel Díaz
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/modernvisualization)
 
-## Modulo Estadística y diseño Experimental
+## Módulo Estadística y diseño Experimental
 - Profesor: José María González
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/estadistica)
 
-## Modulo Algebra
+## Módulo Algebra
 - Profesor: Sandra Navarro
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/algebra)
+
+## Módulo Minería de datos
+- Profesor: José María González
+- Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/mineria)
