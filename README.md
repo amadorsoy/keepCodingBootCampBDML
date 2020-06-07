@@ -31,3 +31,7 @@ Soy el Alumno Amador López Parra. En este lugar se podrán encontrar los módul
 ## Módulo Minería de datos
 - Profesor: José María González
 - Ejercicio práctico: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/mineria)
+
+## Módulo Machine Learning
+- Profesor: Rubén Moreno
+- Ejercicio prático: [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/tree/master/machinelearning)
