@@ -1,5 +1,8 @@
 # Machine Learning
 
+## Archivo ipynb para Descarga
+El ejercicio lo puede descargar [aquí](https://github.com/amadorsoy/keepCodingBootCampBDML/blob/master/machinelearning/Pr%C3%A1ctica%20Machine%20Learning%20Amador%20L%C3%B3pez%20Parra.ipynb)
+
 ## Descripción del trabajo a realizar
 
 Es un problema de regresión: hay que predecir el precio del airbnb utilizando los datos disponibles.
@@ -204,41 +207,51 @@ Aplicamos otros modelos para comprar resultados (Ridge, LinearRegression, Lasso,
 Según los datos de TRAIN y TEST el mejor modelo sería el de RandomForestRegressor.
 
 ### RandomForestRegressor
+```
 Train:  0.774984357089286
 Test:  0.6436467670507735
 MSE Modelo (train): 710
 MSE Modelo (test) : 1.09e+03
 RMSE Modelo (train): 26.6
 RMSE Modelo (test) : 33.1
+```
 
 ### LinearRegression
+```
 Train Score  0.4766626533933088
 Test Score  0.495386877504237
 MSE Modelo (train): 1650.6657163615525
 MSE Modelo (test): 1547.0263489083122
 RMSE Modelo (train): 40.62838559876029
 RMSE Modelo (test): 39.33225583294597
+```
 
 ### Ridge
+```
 Train Score  0.47666138771286326
 Test Score  0.4954352796766537
 MSE Modelo (train): 1650.6697084621221
 MSE Modelo (test): 1546.8779591167372 best alpha: 0.1
 RMSE Modelo (train): 40.628434728181716
 RMSE Modelo (test): 39.330369425124104 best alpha: 0.1
+```
 
 ### Lasso
+```
 Train Score  0.47657858014663446
 Test Score  0.49566229056317684
 MSE Modelo (train): 1650.9308929763088
 MSE Modelo (test): 1546.1819965916181 best alpha: 0.01
 RMSE Modelo (train): 40.631648907917935
 RMSE Modelo (test): 39.321520781775696 best alpha: 0.01
+```
 
 ### ElasticNet
+```
 Train Score  0.4754488729907409
 Test Score  0.4952293919536449
 MSE Modelo (train): 1654.4941182722923
 MSE Modelo (test): 1547.5091629404426 best alpha: 0.01 best l1: 0.9
 RMSE Modelo (train): 40.67547317822243
 RMSE Modelo (test): 39.338392988789494 best alpha: 0.01 best l1: 0.9
+```
